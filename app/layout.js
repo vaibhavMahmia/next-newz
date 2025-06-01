@@ -7,13 +7,8 @@ export const metadata = {
 }
 
 const RootLayout = ({ children }) => <html lang="en">
-  <body>
-    <div id='page'>
-      <MainHeader />
-      {children}
-    </div>
-  </body>
-</html>
+  <body>{children}</body>
+</html>;
 
 
 export default RootLayout;
