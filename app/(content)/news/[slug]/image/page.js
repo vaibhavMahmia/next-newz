@@ -1,9 +1,9 @@
-const { DUMMY_NEWS } = require("@/dummy-news");
+import { getNewsItem } from "@/lib/news";
 const { notFound } = require("next/navigation");
 
 const ImagePage = async ({ params }) => {
     const { slug } = await params;
-    const newsItem = DUMMY_NEWS.find(newsItem => newsItem.slug === slug);
+    const newsItem = await getNewsItem(slug);
     if (!newsItem) notFound();
     return <div className="fullscreen-image">
         <img src={`/images/news/${newsItem.image}`} alt={newsItem.title} />

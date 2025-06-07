@@ -15,4 +15,4 @@ export const MainHeader = () => <header id="main-header">
             </li>
         </ul>
     </nav>
-</header>
+</header>;
